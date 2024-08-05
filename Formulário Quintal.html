@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #B3E5A8; /* Fundo verde claro do logotipo */
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        h2, h3 {
+            color: #FF5722; /* Laranja do logotipo */
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: black;
+            text-transform: uppercase;
+        }
+        input[type="text"], input[type="tel"], input[type="email"], textarea {
+            width: 100%;
+            padding: 8px 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="date"], select {
+            width: 100%;
+            padding: 8px 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #FF5722; /* Laranja do logotipo */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #FF8C00; /* Cor alternativa para o hover */
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .info-text {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: black;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .small-input {
+            width: 100%;
+        }
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <img src="https://raw.githubusercontent.com/gabrielsromualdo/QuintalBrincante/main/QuintalBrincante.png" alt="Logo Quintal Brincante" class="logo">
+        <h2>Ficha Individual</h2>
+        
+        <div class="section">
+            <h3>Identificação</h3>
+            <label>Nome da Criança:</label>
+            <input type="text" name="nomeCriança">
+            <label>Número do CPF:</label>
+            <input type="text" name="cpfCriança" class="small-input" maxlength="14">
+            <label>N° da Identidade:</label>
+            <input type="text" name="identidadeCriança">
+            <label>Endereço:</label>
+            <input type="text" name="endereçoCriança">
+            <label>Número:</label>
+            <input type="text" name="numeroEndereço">
+            <label>Bairro:</label>
+            <input type="text" name="bairroCriança">
+            <label>CEP:</label>
+            <input type="text" name="cepCriança" class="small-input" maxlength="10">
+            <label>Data de Nascimento:</label>
+            <input type="date" name="dataNascimentoCriança">
+        </div>
+
+        <div class="section">
+            <h3>Família</h3>
+            <label>Nome do Pai:</label>
+            <input type="text" name="nomePai">
+            <label>Profissão do Pai:</label>
+            <input type="text" name="profissaoPai">
+            <label>CPF do Pai:</label>
+            <input type="text" name="cpfPai" class="small-input" maxlength="14">
+            <label>Data de nascimento do Pai:</label>
+            <input type="date" name="dataNascimentoPai">
+            <label>Nível de Instrução do Pai:</label>
+            <select name="nivelInstrucaoPai">
+                <option value="Fundamental">Ensino Fundamental</option>
+                <option value="Medio">Ensino Médio</option>
+                <option value="Superior">Ensino Superior</option>
+            </select>
+            <label>Empresa onde trabalha o Pai:</label>
+            <input type="text" name="empresaPai">
+            <label>Telefone Residencial do Pai:</label>
+            <input type="tel" name="telefoneResidencialPai">
+            <label>Telefone Serviço do Pai:</label>
+            <input type="tel" name="telefoneServicoPai">
+            <label>Celular do Pai:</label>
+            <input type="tel" name="celularPai" placeholder="(XX) XXXXX-XXXX">
+            <label>E-mail do Pai:</label>
+            <input type="email" name="emailPai">
+            <label>Religião do Pai:</label>
+            <input type="text" name="religiãoPai">
+            
+            <label>Nome da Mãe:</label>
+            <input type="text" name="nomeMãe">
+            <label>Profissão da Mãe:</label>
+            <input type="text" name="profissaoMãe">
+            <label>CPF da Mãe:</label>
+            <input type="text" name="cpfMãe" class="small-input" maxlength="14">
+            <label>Data de nascimento da Mãe:</label>
+            <input type="date" name="dataNascimentoMãe">
+            <label>Nível de Instrução da Mãe:</label>
+            <select name="nivelInstrucaoMãe">
+                <option value="Fundamental">Ensino Fundamental</option>
+                <option value="Medio">Ensino Médio</option>
+                <option value="Superior">Ensino Superior</option>
+            </select>
+            <label>Empresa onde trabalha a Mãe:</label>
+            <input type="text" name="empresaMãe">
+            <label>Telefone Residencial da Mãe:</label>
+            <input type="tel" name="telefoneResidencialMãe">
+            <label>Telefone Serviço da Mãe:</label>
+            <input type="tel" name="telefoneServicoMãe">
+            <label>Celular da Mãe:</label>
+            <input type="tel" name="celularMãe" placeholder="(XX) XXXXX-XXXX">
+            <label>E-mail da Mãe:</label>
+            <input type="email" name="emailMãe">
+            <label>Religião da Mãe:</label>
+            <input type="text" name="religiãoMãe">
+        </div>
+
+        <div class="section">
+            <h3>Responsável Financeiro</h3>
+            <label>Nome:</label>
+            <input type="text" name="nomeFinanceiro">
+            <label>CPF:</label>
+            <input type="text" name="cpfFinanceiro" class="small-input" maxlength="14">
+            <label>C.I:</label>
+            <input type="text" name="ciFinanceiro">
+            <label>Data de Nascimento:</label>
+            <input type="date" name="dataNascimentoFinanceiro">
+        </div>
+
+        <div class="section">
+            <p class="info-text">Forma de pagamento é somente Pix. O comprovante deve ser enviado todo mês no WhatsApp.</p>
+        </div>
+
+        <div class="section">
+            <h3>Jornada da Criança no Quintal</h3>
+            <label>Horário de entrada:</label>
+            <input type="text" name="horarioEntrada">
+            <label>Horário de saída:</label>
+            <input type="text" name="horarioSaida">
+            <label>Seu pacote é de quantas horas?</label>
+            <select name="pacoteHoras">
+                <option value="integral">Horário integral: R$1.500</option>
+                <option value="parcial4h">Horário parcial 4h: R$840,00</option>
+                <option value="parcial5h">Horário parcial 5h: R$950,00</option>
+                <option value="parcial6h">Horário parcial 6h: R$1.135,00</option>
+                <option value="2xSemana">2x na semana (4 horas): R$635,00</option>
+                <option value="3xSemana">3x na semana (4 horas): R$730,00</option>
+                <option value="diariaIntegral">Diária integral: R$120,00</option>
+                <option value="diariaParcial">Diária parcial: R$120,00</option>
+                <option value="outro">Outra frequência/valor</option>
+            </select>
+            <label>Hora extra:</label>
+            <input type="text" name="horaExtra" placeholder="R$30,00">
+            <label>Quais as pessoas autorizadas para buscar a criança no Quintal?</label>
+            <textarea name="autorizadosBuscar" rows="3"></textarea>
+        </div>
+
+        <div class="section">
+            <h3>Conhecendo a Criança</h3>
+            <label>Esclarecer se os pais são adotivos, falecidos, separados, se a criança é educada por outra pessoa, etc.:</label>
+            <textarea name="informacoesPais" rows="3"></textarea>
+            <label>Outros membros da família que residem na mesma casa:</label>
+            <textarea name="membrosFamilia" rows="3"></textarea>
+            <label>Quem cuida da criança em casa?</label>
+            <textarea name="cuidaCriança" rows="3"></textarea>
+            <label>Descreva a rotina da criança, como é o seu dia (TV, passeios, atividades extras, etc.):</label>
+            <textarea name="rotinaCriança" rows="3"></textarea>
+            <label>Como é a participação da criança nos momentos de alimentação? Quais são suas preferências? De que forma se alimenta?</label>
+            <textarea name="alimentacaoCriança" rows="3"></textarea>
+            <label>Como participa dos momentos de higiene? Em quais situações necessita de ajuda? Qual já realiza sozinha?</label>
+            <textarea name="higieneCriança" rows="3"></textarea>
+            <label>Como é a rotina de sono da criança? Quais momentos no dia que necessita dormir?</label>
+            <textarea name="sonoCriança" rows="3"></textarea>
+            <label>Quais os pontos importantes da saúde da criança?</label>
+            <textarea name="saudeCriança" rows="3"></textarea>
+            <label>Como é o relacionamento com as pessoas da família? Tem irmãos? Como se relacionam?</label>
+            <textarea name="relacionamentoFamilia" rows="3"></textarea>
+            <label>Estuda em alguma escola?</label>
+            <textarea name="escolaCriança" rows="3"></textarea>
+            <label>Possui contato com outras crianças fora do Quintal? Como se relaciona?</label>
+            <textarea name="contatoOutrasCrianças" rows="3"></textarea>
+            <label>Como a criança se comporta diante das frustrações? Como vocês responsáveis lidam com isso?</label>
+            <textarea name="comportamentoFrustracoes" rows="3"></textarea>
+            <label>Em quais momentos observa a criança:</label>
+            <textarea name="momentosCriança" rows="3"></textarea>
+            <label>Como está o desenvolvimento da linguagem da criança? Como se comunica? Há trocas ou omissões de letras na sua fala?</label>
+            <textarea name="desenvolvimentoLinguagem" rows="3"></textarea>
+            <label>Quais estímulos de atividades cognitivas (raciocínios) e motoras (movimento) são proporcionados à criança fora do Quintal?</label>
+            <textarea name="atividadesCognitivasMotoras" rows="3"></textarea>
+            <label>Como é a relação da criança com o Quintal? Demonstra disposição? Faz queixas? Relata momentos da rotina?</label>
+            <textarea name="relacaoComQuintal" rows="3"></textarea>
+            <label>Atualmente, o que vocês (responsáveis) esperam do trabalho realizado pelo Quintal?</label>
+            <textarea name="expectativasQuintal" rows="3"></textarea>
+        </div>
+
+        <div class="section">
+            <h3>Desenvolvimento</h3>
+            <label>Faz algum tipo de acompanhamento?</label>
+            <select name="acompanhamento" class="small-input">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+            <label>Se positivo, descreva qual profissional:</label>
+            <textarea name="profissionalAcompanhamento" rows="3"></textarea>
+            <label>Obtém diagnóstico?</label>
+            <textarea name="diagnostico" rows="3"></textarea>
+            <label>Apresenta algum interesse específico ou habilidade especial?</label>
+            <select name="habilidadeEspecial" class="small-input">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+            <label>Necessita de algum cuidado especial no Quintal?</label>
+            <select name="cuidadoEspecial" class="small-input">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+            <label>Teve alguma experiência fora do comum?</label>
+            <select name="experienciaForaComum" class="small-input">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+            <label>Descreva-a:</label>
+            <textarea name="experiencia" rows="3"></textarea>
+            <label>A criança faz uso de algum objeto de transição (chupeta, fralda, óculos, paninho)?</label>
+            <select name="objetoTransicao" class="small-input">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+            <label>Qual/quais?</label>
+            <textarea name="quaisObjetos" rows="3"></textarea>
+            <label>Aconteceu alguma coisa incomum no nascimento?</label>
+            <select name="incomumNascimento" class="small-input">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+            <label>Possui alguma deficiência, síndrome ou transtorno do neurodesenvolvimento?</label>
+            <select name="deficiencia" class="small-input">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+            <label>Qual?</label>
+            <textarea name="qualDeficiencia" rows="3"></textarea>
+            <label>As vacinas até a presente data estão em ordem?</label>
+            <select name="vacinasOrdem" class="small-input">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+            <label>Precisa de algum cuidado especial por motivo de saúde?</label>
+            <select name="cuidadoSaude" class="small-input">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+            <label>O aluno é alérgico a algum medicamento tópico, oral ou injetável?</label>
+            <select name="alergiaMedicamento" class="small-input">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+            <label>Quais?</label>
+            <textarea name="quaisMedicamentos" rows="3"></textarea>
+        </div>
+
+        <div class="section">
+            <h3>Termo de autorização para uso da imagem</h3>
+            <label>Autoriza que as fotos e filmagens que incluam seu/sua filho(a) sejam feitas e utilizadas pela equipe do Quintal para fins pedagógicos, fins de publicidade do trabalho do Quintal (informativos, Instagram e/ou semelhantes) para publicação nas redes sociais?</label>
+            <select name="autorizacaoImagem" class="small-input">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function(event){
+            event.preventDefault();
+            var formData = new FormData(this);
+            var object = {};
+            formData.forEach((value, key) => object[key] = value);
+            var json = JSON.stringify(object);
+
+            fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+                method: "POST",
+                body: json,
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(result => {
+                alert("Formulário enviado com sucesso!");
+            })
+            .catch(error => {
+                console.error("Erro ao enviar o formulário:", error);
+            });
+        });
+
+        // Máscara de entrada para CPF, CEP e celular
+        document.querySelectorAll('input[name="cpfCriança"], input[name="cpfPai"], input[name="cpfMãe"], input[name="cpfFinanceiro"]').forEach(function(input) {
+            input.addEventListener('input', function() {
+                let value = input.value.replace(/\D/g, '');
+                value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+                input.value = value;
+            });
+        });
+
+        document.querySelectorAll('input[name="cepCriança"]').forEach(function(input) {
+            input.addEventListener('input', function() {
+                let value = input.value.replace(/\D/g, '');
+                value = value.replace(/(\d{2})(\d)/, '$1.$2');
+                value = value.replace(/(\d{3})(\d{1,3})$/, '$1.$2');
+                input.value = value;
+            });
+        });
+
+        document.querySelectorAll('input[name="celularPai"], input[name="celularMãe"]').forEach(function(input) {
+            input.addEventListener('input', function() {
+                let value = input.value.replace(/\D/g, '');
+                value = value.replace(/(\d{2})(\d)/, '($1) $2');
+                value = value.replace(/(\d{5})(\d{4})$/, '$1-$2');
+                input.value = value;
+            });
+        });
+    </script>
+</body>
+</html>
